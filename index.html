@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16883 Scouting App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Add this HTML for the progress bar -->
+    <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+    </div>
+
+    <section class="title">
+        <div class="boldTitle">Scouting App</div>
+        <p>Scouting App for 16883 Dyno-Byte</p>       
+    </section>
+
+    <div class="questions">
+        <section id="1" class="question1">
+            <form id="form1">
+                <h1>Enter Team Name and Number</h1>
+                <input type="text" name="teamName" placeholder="Name"> 
+                <input type="text" name="teamNumber" placeholder="Number">
+            </form>
+        </section>
+
+        <section id="2" class="question2">
+            <form id="form2">
+                <h1>What Side do they play on (left or right)</h1>
+                <input id="sideLeft" type="checkbox" name="side" value="left"> Lefties 
+                <input id="sideRight" type="checkbox" name="side" value="right"> Righties
+            </form>
+        </section>
+
+        <section id="3" class="question3">
+            <form id="form3">
+                <h1>Did they have an Auton?</h1>
+                <input id="autonTrue" type="checkbox" name="auton" value="yes" onclick="ifSo()"> Yes 
+                <input id="autonFalse" type="checkbox" name="auton" value="no"> No
+                <div id="ifSoQuestion" style="display:none;">
+                    If so, how many samples do they score (use this format 0-0): 
+                    <input id="samplesScoredAuton" type="text" name="samplesScored">
+                </div>
+            </form>
+        </section>
+
+        <section id="4" class="question4">
+            <form id="form4">
+                <button>4</button>
+            </form>
+        </section>
+
+        <section id="5" class="question5">
+            <form id="form5">
+                <button type="button" onclick="submitData()">Submit Data</button>
+            </form>
+        </section>
+
+
+    </div>
+    <button class="nextquestionbutton" onclick="nextQuestion()">Next question</button>
+    <button class="previousquestionbutton" onclick="previousQuestion()">Previous question</button>
+
+    <script src="index.js" async defer></script>
+</body>
+</html>
